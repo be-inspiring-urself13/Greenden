@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GREENDEN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./Images/BestSellers_ 1.webp">
+  <link href="
+https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/base.min.css
+" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      let mobileMenu = document.getElementById("mobile-div");
+      mobileMenu.classList.toggle("translate-x-0");
+      mobileMenu.classList.toggle("translate-x-full");
+    }
+
+    function popUp() {
+      let popUpData = document.getElementById("popUp");
+      popUpData.style.display = "flex";
+    }
+    function closePopUp() {
+      let popUpData = document.getElementById("popUp");
+      popUpData.style.display = "none";
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <!-- navabar -->
+  <div class="bg-red-300 w-full h-20 flex justify-between shadow-xl z-10 sticky top-0">
+    <div class="text-green-900 text-4xl pl-10 pt-4 italic">GREENDEN</div>
+    <div class="flex justify-center items-center h-20 w-1/4 lg:hidden " onclick="toggleMenu()"> <svg
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="text-white h-10 w-3/6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg> </div>
+
+    <div id="desktop-div" class="w-1/4 flex justify-center items-center gap-3.5 hidden lg:flex">
+      <a href="index.html"
+        class=" p-2 w-20 text-center rounded-md text-black border border-green-800 transition  duration-500  hover:text-white hover:bg-green-800">Home</a>
+      <a href="product.html"
+        class=" p-2 w-20 text-center rounded-md text-black  transition duration-500   hover:text-white hover:bg-green-800 ">Products</a>
+      <a href="contact.html"
+        class=" p-2 w-20 text-center rounded-md text-black  transition duration-500  hover:text-white hover:bg-green-800">Contact</a>
+    </div>
+  </div>
+
+
+  <div id="mobile-div"
+    class="h-svh w-2/5 flex flex-col items-center gap-3.5 fixed top-20 right-0 z-30 bg-red-200 bg-opacity-95 transform translate-x-full transition-transform duration-500 ease-in-out p-4 lg:hidden">
+    <a href="index.html"
+      class=" p-2 w-20 text-center rounded-md text-black border border-green-800 transition duration-500  hover:text-white hover:bg-green-800">Home</a>
+    <a href="product.html"
+      class=" p-2 w-20 text-center rounded-md text-black transition duration-500   hover:text-white hover:bg-green-800 ">Products</a>
+    <a href="contact.html"
+      class=" p-2 w-20 text-center rounded-md text-black  transition duration-500  hover:text-white hover:bg-green-800">Contact</a>
+  </div>
+  </div>
+
+   <!------------------------------Product Section------------------------------------->
+   <section class="text-center bg-red-200">
+    <h1 class="text-4xl font-bold italic text-center p-6 animate-bounce" >Our Product'sz</h1>
+    <input
+      type="text"
+      class="p-3 mt-2 border border-black"
+      placeholder="Search for products..."
+      style="width: 80%"
+    />
+    <div class="grid grid-cols-2 mt-8 gap-5 md:grid-cols-4">
+      <div>
+        <img
+          src="./Images/bst1.jpg"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Lilly Plant</h1>
+        <p>$20</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst2.jpg"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Lavender</h1>
+        <p>$15</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst3.png"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>White chrysanth</h1>
+        <p>$30</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst4.png"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Cactus Plant</h1>
+        <p>$10</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst5.png"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Rose Plant</h1>
+        <p>$37</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst6.png"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Snake Plant</h1>
+        <p>$25</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst7.png"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Bell Flower</h1>
+        <p>$40</p>
+      </div>
+      <div>
+        <img
+          src="./Images/bst8.jpg"
+          alt="Rose Plant"
+          class="inline hover:shadow-xl transform hover:-translate-y-2"
+        />
+        <h1>Big Leaf Plant</h1>
+        <p>$20</p>
+      </div>
+    </div>
+  </section>
+<!-- footer -->
+<div class="bg-red-300">
+    <div class=" p-4">
+      <h1 class="text-green-800 text-4xl font-bold  pl-3">GREENDEN</h1>
+      <p class="pt-2 pl-3">At Greenden, we are committed to promoting sustainable plant care and environmental
+        responsibility, We believe in nurturing growth, protecting nature, and cultivating a greener future for all.
+        Every plant we provide is a step towards creating a healthier planet, one leaf at a time.
+      </p>
+      <p class="font-bold pt-2 pl-3 pb-2">&copy;Greenden 2024. All Rights Reserved</p>
+    </div>
+  </div>
+  <source src="index.js">
+</body>
+
+</html>
