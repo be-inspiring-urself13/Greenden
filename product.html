@@ -63,51 +63,55 @@ https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/base.min.css
 
    <!------------------------------Product Section------------------------------------->
    <section class="text-center bg-red-200">
-    <h1 class="text-4xl font-bold italic text-center p-6 animate-bounce" >Our Product'sz</h1>
+    <h1 class="text-4xl font-bold italic text-center p-6 animate-bounce">
+      Our Product'sz
+    </h1>
     <input
       type="text"
+      id="searchInput"
       class="p-3 mt-2 border border-black"
       placeholder="Search for products..."
       style="width: 80%"
+      onkeyup="filterProducts()"
     />
-    <div class="grid grid-cols-2 mt-8 gap-5 md:grid-cols-4">
-      <div>
+    <div class="grid grid-cols-2 mt-8 gap-5 md:grid-cols-4" id="productGrid">
+      <div class="product-item">
         <img
           src="./Images/bst1.jpg"
-          alt="Rose Plant"
+          alt="Lilly Plant"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>Lilly Plant</h1>
         <p>$20</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst2.jpg"
-          alt="Rose Plant"
+          alt="Lavender"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>Lavender</h1>
         <p>$15</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst3.png"
-          alt="Rose Plant"
+          alt="White chrysanth"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>White chrysanth</h1>
         <p>$30</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst4.png"
-          alt="Rose Plant"
+          alt="Cactus Plant"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>Cactus Plant</h1>
         <p>$10</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst5.png"
           alt="Rose Plant"
@@ -116,28 +120,28 @@ https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/base.min.css
         <h1>Rose Plant</h1>
         <p>$37</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst6.png"
-          alt="Rose Plant"
+          alt="Snake Plant"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>Snake Plant</h1>
         <p>$25</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst7.png"
-          alt="Rose Plant"
+          alt="Bell Flower"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>Bell Flower</h1>
         <p>$40</p>
       </div>
-      <div>
+      <div class="product-item">
         <img
           src="./Images/bst8.jpg"
-          alt="Rose Plant"
+          alt="Big Leaf Plant"
           class="inline hover:shadow-xl transform hover:-translate-y-2"
         />
         <h1>Big Leaf Plant</h1>
@@ -145,6 +149,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/base.min.css
       </div>
     </div>
   </section>
+  
 <!-- footer -->
 <div class="bg-red-300">
     <div class=" p-4">
@@ -156,7 +161,20 @@ https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/base.min.css
       <p class="font-bold pt-2 pl-3 pb-2">&copy;Greenden 2024. All Rights Reserved</p>
     </div>
   </div>
-  <source src="index.js">
+  <script>
+    function filterProducts() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product-item');
+      products.forEach(product => {
+        const productName = product.querySelector('h1').textContent.toLowerCase();
+        if (productName.includes(searchInput)) {
+          product.style.display = '';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 
-</html>
+</html> 
